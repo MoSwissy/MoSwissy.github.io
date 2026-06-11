@@ -1,11 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Swissyworks</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwissyWorks — Independent App Studio</title>
+  <meta name="description" content="SwissyWorks is an independent mobile app studio building thoughtful digital products for iOS and Android." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #e8673a;
+      --orange-dark: #c94f20;
+      --text-primary: #1a1a1a;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9a9a9a;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f7f6f3;
+      --border: rgba(0,0,0,0.1);
+      --border-strong: rgba(0,0,0,0.18);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      background: linear-gradient(135deg, #e8673a 0%, #c94f20 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 13px; color: #fff; letter-spacing: -0.3px;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 17px; color: var(--text-primary);
+    }
+
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      font-size: 14px; color: var(--text-secondary);
+      font-weight: 400; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+      padding: 80px 48px 88px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 46px; line-height: 1.08; letter-spacing: -1.8px;
+      color: var(--text-primary); margin-bottom: 22px;
+    }
+    .hero h1 .accent { color: var(--orange); }
+
+    .hero-sub {
+      font-size: 16px; line-height: 1.75;
+      color: var(--text-secondary); font-weight: 300;
+      max-width: 440px; margin-bottom: 38px;
+    }
+
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange); color: #fff;
+      padding: 13px 26px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 500;
+      transition: background 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--orange-dark); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent; color: var(--text-primary);
+      padding: 12px 26px; border-radius: var(--radius-sm);
+      border: 0.5px solid var(--border-strong);
+      font-size: 14px; font-weight: 500;
+      transition: background 0.2s; cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--bg-secondary); }
+
+    /* Hero Visual */
+    .hero-visual {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 0.5px solid var(--border);
+      padding: 28px; height: 320px;
+      display: flex; gap: 14px;
+    }
+
+    .phone-card {
+      flex: 1; background: var(--bg-primary);
+      border-radius: 18px;
+      border: 0.5px solid var(--border);
+      padding: 18px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .phone-bar {
+      height: 5px; border-radius: 3px;
+      background: var(--border);
+    }
+    .phone-bar.accent { background: var(--orange); width: 65%; }
+    .phone-bar.short { width: 42%; }
+    .phone-screen {
+      flex: 1; border-radius: 12px;
+      background: var(--bg-secondary);
+      border: 0.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .phone-screen svg {
+      width: 28px; height: 28px;
+      stroke: var(--orange); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .phone-dots { display: flex; gap: 5px; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--border);
+    }
+    .dot.on { background: var(--orange); }
+    .phone-label {
+      font-size: 10px; font-weight: 500;
+      color: var(--text-muted); letter-spacing: 0.3px;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 34px; letter-spacing: -1px;
+      color: var(--text-primary); margin-bottom: 18px;
+    }
+
+    .about p {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      max-width: 620px; margin-bottom: 10px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; margin-top: 44px;
+    }
+
+    .pillar {
+      background: var(--bg-primary);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+    }
+
+    .pillar-icon {
+      margin-bottom: 12px;
+    }
+    .pillar-icon svg {
+      width: 22px; height: 22px;
+      stroke: var(--orange); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .pillar-title {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-primary); margin-bottom: 5px;
+    }
+    .pillar-desc {
+      font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+    }
+
+    /* ── PRIVACY SECTION ── */
+    .privacy-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center;
+      padding: 80px 48px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .privacy-section p {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 28px;
+    }
+
+    .doc-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .doc-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 20px; border-radius: var(--radius-sm);
+      border: 0.5px solid var(--border-strong);
+      font-size: 13px; font-weight: 500;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .doc-btn:hover { background: var(--bg-secondary); border-color: var(--orange); }
+    .doc-btn svg {
+      width: 16px; height: 16px;
+      stroke: var(--orange); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .trust-cards { display: flex; flex-direction: column; gap: 14px; }
+
+    .trust-card {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--bg-secondary);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+    .trust-card svg {
+      width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px;
+      stroke: var(--orange); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .trust-card-title {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-primary); margin-bottom: 3px;
+    }
+    .trust-card-desc {
+      font-size: 13px; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 80px 48px;
+      background: var(--bg-secondary);
+      border-bottom: 0.5px solid var(--border);
+      text-align: center;
+    }
+
+    .contact .section-title { margin-bottom: 12px; }
+
+    .contact p {
+      font-size: 15px; color: var(--text-secondary);
+      font-weight: 300; margin-bottom: 32px;
+    }
+
+    .email-card {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 30px; border-radius: var(--radius-md);
+      background: var(--bg-primary);
+      border: 0.5px solid var(--border);
+      font-size: 15px; font-weight: 500;
+      color: var(--text-primary);
+      transition: border-color 0.2s;
+    }
+    .email-card:hover { border-color: var(--orange); }
+    .email-card svg {
+      width: 18px; height: 18px;
+      stroke: var(--orange); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 30px 48px;
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a {
+      font-size: 13px; color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text-primary); }
+
+    .footer-copy {
+      font-size: 13px; color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 56px 24px 64px; gap: 40px; }
+      .hero h1 { font-size: 36px; }
+      .hero-visual { height: 220px; }
+      .about { padding: 56px 24px; }
+      .privacy-section { grid-template-columns: 1fr; padding: 56px 24px; gap: 40px; }
+      .contact { padding: 56px 24px; }
+      footer { padding: 24px; flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-links { flex-wrap: wrap; gap: 16px; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to Swissyworks</h1>
-    <p>Mobile games coming soon to iOS and Android!</p>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="nav-links">
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">Independent App Studio</div>
+      <h1>Building <span class="accent">thoughtful</span> digital products.</h1>
+      <p class="hero-sub">SwissyWorks is an independent studio creating mobile applications focused on solving real problems with clean, user-centered design.</p>
+      <div class="btn-group">
+        <a href="#contact" class="btn-primary">Contact Us</a>
+        <a href="privacy.html" class="btn-outline">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!-- iOS -->
+      <div class="phone-card">
+        <div class="phone-bar accent"></div>
+        <div class="phone-bar short"></div>
+        <div class="phone-screen">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+        </div>
+        <div class="phone-dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
+        <div class="phone-label">iOS App</div>
+      </div>
+      <!-- Android -->
+      <div class="phone-card">
+        <div class="phone-bar accent"></div>
+        <div class="phone-bar short"></div>
+        <div class="phone-screen">
+          <svg viewBox="0 0 24 24"><path d="M4 10h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8z"/><path d="M8 10V6a4 4 0 0 1 8 0v4"/><line x1="9" y1="3" x2="7" y2="1"/><line x1="15" y1="3" x2="17" y2="1"/></svg>
+        </div>
+        <div class="phone-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div>
+        <div class="phone-label">Android App</div>
+      </div>
+      <!-- Coming Soon -->
+      <div class="phone-card">
+        <div class="phone-bar accent"></div>
+        <div class="phone-bar short"></div>
+        <div class="phone-screen">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="phone-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div>
+        <div class="phone-label">Coming Soon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="section-label">About</div>
+    <h2 class="section-title">About SwissyWorks</h2>
+    <p>SwissyWorks is a product-driven studio focused on designing and building mobile applications that solve real-world problems.</p>
+    <p>We combine thoughtful UX design with modern engineering to create reliable, scalable, and intuitive digital experiences.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+        </div>
+        <div class="pillar-title">Mobile-first</div>
+        <div class="pillar-desc">Built for iOS and Android from day one</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+        </div>
+        <div class="pillar-title">Clean UX</div>
+        <div class="pillar-desc">Interfaces that get out of the way</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="pillar-title">Privacy-conscious</div>
+        <div class="pillar-desc">Only data we truly need</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="pillar-title">Long-term vision</div>
+        <div class="pillar-desc">Products built to grow and last</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY & LEGAL -->
+  <section class="privacy-section">
+    <div>
+      <div class="section-label">Privacy & Legal</div>
+      <h2 class="section-title">Your data, protected.</h2>
+      <p>SwissyWorks collects only the minimum data required for our apps to function. No selling, no unnecessary tracking.</p>
+      <div class="doc-links">
+        <a href="privacy.html" class="doc-btn">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Privacy Policy
+        </a>
+        <a href="terms.html" class="doc-btn">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Terms of Service
+        </a>
+      </div>
+    </div>
+    <div class="trust-cards">
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="3" x2="21" y2="21"/><path d="M20.94 13A8 8 0 0 0 12 4c-1.19 0-2.32.26-3.34.7"/><path d="M3.06 11a8 8 0 0 0 14.29 6.47"/></svg>
+        <div>
+          <div class="trust-card-title">No personal data sold</div>
+          <div class="trust-card-desc">Your information is never shared with third parties for profit</div>
+        </div>
+      </div>
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div>
+          <div class="trust-card-title">Minimal data collection</div>
+          <div class="trust-card-desc">Only what's needed for the app to work properly</div>
+        </div>
+      </div>
+      <div class="trust-card">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        <div>
+          <div class="trust-card-title">App Store compliant</div>
+          <div class="trust-card-desc">Meets Apple and Google privacy requirements</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Get in touch</h2>
+    <p>Questions about our apps or privacy practices? We're happy to help.</p>
+    <a href="mailto:contact@swissyworks.com" class="email-card">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      contact@swissyworks.com
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 SwissyWorks. All rights reserved.</div>
+  </footer>
+
 </body>
 </html>
