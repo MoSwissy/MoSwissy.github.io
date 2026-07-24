@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Terms of Service — Juzoor (جذور)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --orange: #e8673a;
+      --teal: #0e7c7b;
+      --text-primary: #1a1a1a;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9a9a9a;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f7f6f3;
+      --bg-warm: #fbf7f0;
+      --border: rgba(0,0,0,0.1);
+      --border-strong: rgba(0,0,0,0.18);
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px); z-index: 100;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      background: linear-gradient(135deg, #e8673a 0%, #c94f20 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 13px; color: #fff;
+    }
+    .logo-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 14px; color: var(--text-secondary); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* CONTAINER */
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 48px 96px; }
+
+    /* BACK */
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-secondary);
+      border: 0.5px solid var(--border-strong);
+      padding: 8px 16px; border-radius: 8px;
+      margin-bottom: 48px; transition: background 0.2s;
+    }
+    .back-btn:hover { background: var(--bg-secondary); }
+
+    /* APP BADGE */
+    .app-badge {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--bg-warm);
+      border: 0.5px solid var(--border);
+      border-radius: 14px; padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+    .app-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: linear-gradient(135deg, #0e7c7b, #065958);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 18px; color: #fff; flex-shrink: 0;
+      letter-spacing: -1px;
+    }
+    .app-name {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 16px; color: var(--text-primary);
+    }
+    .app-meta { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+    /* PAGE HEADER */
+    .page-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 1.8px;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 14px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 40px; letter-spacing: -1.5px;
+      color: var(--text-primary); margin-bottom: 12px;
+    }
+    .date { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+    /* SUMMARY CARD */
+    .summary-card {
+      background: var(--bg-secondary);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 10px; padding: 18px 22px;
+      margin-bottom: 48px;
+    }
+    .summary-card p {
+      font-size: 14px; line-height: 1.75;
+      color: var(--text-secondary); font-weight: 400; margin: 0;
+    }
+    .summary-card strong { color: var(--text-primary); }
+
+    /* SECTIONS */
+    h2 {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 18px; color: var(--text-primary);
+      margin: 40px 0 12px; padding-top: 8px;
+      border-top: 0.5px solid var(--border);
+    }
+    h3 {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-primary); margin: 20px 0 8px;
+    }
+    p {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 14px;
+    }
+    ul { margin: 10px 0 14px 20px; }
+    ul li {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 6px;
+    }
+    .muted { font-size: 13px; color: var(--text-muted); font-style: italic; }
+    code {
+      font-size: 12px; background: var(--bg-secondary);
+      border: 0.5px solid var(--border); border-radius: 4px;
+      padding: 2px 6px; color: var(--text-secondary);
+    }
+    .contact-link { color: var(--orange); }
+    .teal-link { color: var(--teal); }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+      border-top: 0.5px solid var(--border);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--text-secondary); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .container { padding: 48px 24px 72px; }
+      h1 { font-size: 32px; }
+      footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#contact">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="/" class="back-btn">← Back to Home</a>
+
+    <div class="app-badge">
+      <div class="app-icon">جذ</div>
+      <div>
+        <div class="app-name">Juzoor — جذور</div>
+        <div class="app-meta">Arabic cryptogram puzzle game &middot; com.swissyworks.juzoor &middot; SwissyWorks</div>
+      </div>
+    </div>
+
+    <div class="page-label">Legal</div>
+    <h1>Terms of Service</h1>
+    <div class="date">Effective: 24 July 2026 &middot; Last updated: 24 July 2026</div>
+
+    <div class="summary-card">
+      <p><strong>The short version.</strong> Juzoor is a free word-puzzle game. Play it, enjoy it, and keep your account and device secure. Don't try to cheat the game systems, break the app, or use it unlawfully. The app is provided "as is," and in-game items (hints, lives, XP) have no real-world monetary value.</p>
+    </div>
+
+    <p>These Terms of Service ("Terms") govern your use of the Juzoor mobile application ("Juzoor", "the app", "we", "us"). By downloading, installing, or using Juzoor, you agree to these Terms. If you do not agree, please do not use the app.</p>
+
+    <h2>1. Eligibility</h2>
+    <p>Juzoor is intended for a general audience. You must be at least 13 years old (or the minimum age required in your country to use online services) to use the app. If you are under the age of majority where you live, you may use Juzoor only with the involvement of a parent or guardian.</p>
+
+    <h2>2. Your account</h2>
+    <p>Juzoor creates an anonymous account automatically so your progress can be saved and synced — no name, email, or password is required. You are responsible for the device on which the app is installed. Because accounts are anonymous and stored with your device, we may not be able to recover progress if you lose access to your device or clear the app's data. See our <a href="/juzoor-privacy.html" class="teal-link">Privacy Policy</a> for how your data is handled.</p>
+
+    <h2>3. License to use the app</h2>
+    <p>Subject to these Terms, we grant you a personal, limited, non-exclusive, non-transferable, revocable license to download and use Juzoor on devices you own or control, for your own personal, non-commercial entertainment.</p>
+
+    <h2>4. Acceptable use</h2>
+    <p>You agree that you will not:</p>
+    <ul>
+      <li>Copy, modify, reverse-engineer, decompile, or attempt to extract the source code of the app, except where such restriction is prohibited by law</li>
+      <li>Cheat, tamper with, automate, or exploit game systems (including the lives, hints, XP, Daily Challenge, or rewards systems), or manipulate saved data or network traffic to gain an unfair advantage</li>
+      <li>Use the app to violate any applicable law or regulation, or to infringe anyone's rights</li>
+      <li>Attempt to disrupt, overload, or gain unauthorized access to the app, our backend, or other users' data</li>
+      <li>Remove, obscure, or alter any proprietary notices in the app</li>
+    </ul>
+
+    <h2>5. In-game items and virtual economy</h2>
+    <p>Juzoor includes virtual items and currencies such as <strong>hints</strong>, <strong>lives</strong>, and <strong>experience points (XP)</strong>. These items:</p>
+    <ul>
+      <li>Have no monetary value and cannot be exchanged for real money, goods, or anything of value</li>
+      <li>Are licensed to you for use within the app only, and are not your property</li>
+      <li>May be earned, granted, adjusted, expired, or removed at our discretion, and may change as the game is updated</li>
+    </ul>
+    <p class="muted">The current version of Juzoor does not sell in-app purchases or display third-party advertisements. If we introduce optional purchases or ads in the future, additional terms may apply and will be presented in the app.</p>
+
+    <h2>6. Game content</h2>
+    <p>Juzoor's puzzles feature Arabic proverbs, wisdom, and poetry. Quotations and their authors are used for educational and entertainment purposes. All app design, code, artwork, branding, and the selection and arrangement of content are owned by SwissyWorks or its licensors and are protected by intellectual-property laws. You may not reproduce or distribute app content except as normally permitted by using the app (for example, sharing a solved quote through the app's share feature).</p>
+
+    <h2>7. Updates and availability</h2>
+    <p>We may update, change, suspend, or discontinue the app or any of its features at any time, including the game's balance, levels, and systems. We may also release updates that you need to install to keep using the app. We do not guarantee the app will always be available, uninterrupted, or error-free.</p>
+
+    <h2>8. Disclaimers</h2>
+    <p>The app is provided "as is" and "as available," without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the app will meet your requirements or that any defects will be corrected.</p>
+
+    <h2>9. Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, SwissyWorks and its owners shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, progress, or goodwill, arising out of or related to your use of (or inability to use) the app. Nothing in these Terms limits liability that cannot be limited under applicable law.</p>
+
+    <h2>10. Termination</h2>
+    <p>You may stop using Juzoor at any time by uninstalling it. We may suspend or terminate your access to the app if you breach these Terms or use the app in a way that could harm the app, us, or other users. Sections that by their nature should survive termination (including Sections 5, 6, 8, 9, and 11) will continue to apply.</p>
+
+    <h2>11. Governing law</h2>
+    <p>These Terms are governed by the laws applicable at SwissyWorks' place of business, without regard to conflict-of-law principles, except where mandatory local consumer-protection laws in your country of residence provide otherwise. You may also have rights under the app-store terms of the platform through which you obtained Juzoor (for example, Google Play).</p>
+
+    <h2>12. Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. When we do, we will revise the "Last updated" date above and post the new version at this URL. Your continued use of the app after changes take effect means you accept the revised Terms.</p>
+
+    <h2>13. Contact us</h2>
+    <p>Questions about these Terms? Contact us at:</p>
+    <p><strong>SwissyWorks</strong><br />
+    Email: <a href="mailto:contact@swissyworks.com" class="contact-link">contact@swissyworks.com</a></p>
+  </div>
+
+  <footer>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 SwissyWorks. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
