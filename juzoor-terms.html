@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <title>Terms of Service — Juzoor (جذور)</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
@@ -71,11 +74,9 @@
     }
     .app-icon {
       width: 52px; height: 52px; border-radius: 12px;
-      background: linear-gradient(135deg, #0e7c7b, #065958);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 18px; color: #fff; flex-shrink: 0;
-      letter-spacing: -1px;
+      display: block; flex-shrink: 0;
+      object-fit: cover;
+      border: 0.5px solid var(--border);
     }
     .app-name {
       font-family: 'Syne', sans-serif; font-weight: 700;
@@ -173,7 +174,7 @@
     <a href="/" class="back-btn">← Back to Home</a>
 
     <div class="app-badge">
-      <div class="app-icon">جذ</div>
+      <img src="juzoor-icon.png" alt="Juzoor app icon" class="app-icon" width="52" height="52" />
       <div>
         <div class="app-name">Juzoor — جذور</div>
         <div class="app-meta">Arabic cryptogram puzzle game &middot; com.swissyworks.juzoor &middot; SwissyWorks</div>
