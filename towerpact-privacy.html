@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Privacy Policy — Tower Pact (ميثاق البرج)</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --orange: #e8673a;
+      --teal: #2a6fdb; /* Tower Pact accent (frost blue) */
+      --text-primary: #1a1a1a;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9a9a9a;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f7f6f3;
+      --bg-warm: #fbf7f0;
+      --border: rgba(0,0,0,0.1);
+      --border-strong: rgba(0,0,0,0.18);
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px); z-index: 100;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      background: linear-gradient(135deg, #e8673a 0%, #c94f20 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 13px; color: #fff;
+    }
+    .logo-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 14px; color: var(--text-secondary); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 48px 96px; }
+
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-secondary);
+      border: 0.5px solid var(--border-strong);
+      padding: 8px 16px; border-radius: 8px;
+      margin-bottom: 48px; transition: background 0.2s;
+    }
+    .back-btn:hover { background: var(--bg-secondary); }
+
+    .app-badge {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--bg-warm);
+      border: 0.5px solid var(--border);
+      border-radius: 14px; padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+    .app-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      display: block; flex-shrink: 0;
+      object-fit: cover;
+      border: 0.5px solid var(--border);
+    }
+    .app-name {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 16px; color: var(--text-primary);
+    }
+    .app-meta { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+    .page-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 1.8px;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 14px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 40px; letter-spacing: -1.5px;
+      color: var(--text-primary); margin-bottom: 12px;
+    }
+    .date { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+    .summary-card {
+      background: var(--bg-secondary);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 10px; padding: 18px 22px;
+      margin-bottom: 48px;
+    }
+    .summary-card p {
+      font-size: 14px; line-height: 1.75;
+      color: var(--text-secondary); font-weight: 400; margin: 0;
+    }
+    .summary-card strong { color: var(--text-primary); }
+
+    .notice {
+      background: var(--bg-warm);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: 8px; padding: 14px 18px;
+      margin: 16px 0;
+    }
+    .notice p { font-size: 13px; margin: 0; color: var(--text-secondary); }
+
+    h2 {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 18px; color: var(--text-primary);
+      margin: 40px 0 12px; padding-top: 8px;
+      border-top: 0.5px solid var(--border);
+    }
+    h3 {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-primary); margin: 20px 0 8px;
+    }
+    p {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 14px;
+    }
+    ul { margin: 10px 0 14px 20px; }
+    ul li {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 6px;
+    }
+    .muted { font-size: 13px; color: var(--text-muted); font-style: italic; }
+    code {
+      font-size: 12px; background: var(--bg-secondary);
+      border: 0.5px solid var(--border); border-radius: 4px;
+      padding: 2px 6px; color: var(--text-secondary);
+    }
+    .contact-link { color: var(--orange); }
+    .teal-link { color: var(--teal); }
+
+    footer {
+      padding: 30px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+      border-top: 0.5px solid var(--border);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--text-secondary); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .container { padding: 48px 24px 72px; }
+      h1 { font-size: 32px; }
+      footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#contact">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="/" class="back-btn">← Back to Home</a>
+
+    <div class="app-badge">
+      <img src="towerpact-icon.png" alt="Tower Pact app icon" class="app-icon" width="52" height="52" />
+      <div>
+        <div class="app-name">Tower Pact — ميثاق البرج</div>
+        <div class="app-meta">Vertical climbing game &middot; com.swissyworks.towerpact &middot; SwissyWorks</div>
+      </div>
+    </div>
+
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="date">Effective: 1 November 2026 &middot; Last updated: 1 November 2026</div>
+
+    <div class="summary-card">
+      <p><strong>The short version.</strong> Tower Pact has no ads, no analytics and no tracking, and it never asks for your email, phone number or real name. The game creates an anonymous account for you so it can run leaderboards. Online, we keep only the player name you show on leaderboards and your best climbs — and those are <strong>public</strong>: other players can see your name, your score and a "ghost" of your climb. Everything else stays on your device. You can delete your online data from inside the game at any time. We do not sell your data.</p>
+    </div>
+
+    <p>This Privacy Policy explains what information the Tower Pact mobile application ("Tower Pact", "the game", "we", "us") collects, how it is used, and the choices you have. Tower Pact is playable offline; the online features (leaderboards and ghost races) are the only reason anything leaves your device.</p>
+
+    <h2>1. Information we collect</h2>
+
+    <h3>a. Data kept on your device only</h3>
+    <p>These are saved on your device and are never sent to us:</p>
+    <ul>
+      <li>Your best scores, floors and combos, World Tour stars and season pass progress</li>
+      <li>Replays of your own best runs, used to show your personal ghost</li>
+      <li>Your settings (sound, music, vibration, tilt steering, language)</li>
+    </ul>
+
+    <h3>b. Anonymous account identifier</h3>
+    <p>To run leaderboards, the game automatically creates an anonymous account with our backend provider (Supabase). This account is a randomly generated identifier stored on your device. It is not linked to your name, email address, phone number, or any social login. You are never asked to sign in or register.</p>
+
+    <h3>c. Player name</h3>
+    <p>Each account has a player name shown on leaderboards. The game gives you a made-up name (for example "Climber 4821"); you can change it in Settings. Your player name is <strong>public</strong>. Please don't use your real name or anything that identifies you.</p>
+
+    <h3>d. Your best climbs</h3>
+    <p>When you finish a climb of the daily tower or a World Tour tower, the game sends your result to our backend: score, floor reached, stars, how long the climb took, and a simplified path of your climber's movement. We keep only your best climb on each leaderboard. Your score and path are <strong>public</strong>: they appear on leaderboards and as a "ghost" that other players can race.</p>
+
+    <h3>e. Information we do not collect</h3>
+    <ul>
+      <li>No name, email address, or phone number</li>
+      <li>No location, and no location permission</li>
+      <li>No contacts, photos, camera, or microphone access</li>
+      <li>No advertising ID and no device identifiers</li>
+      <li>No analytics, advertising, or behavioral-tracking SDKs</li>
+    </ul>
+    <p class="muted">Like any internet service, our backend provider receives your device's IP address when the game connects. It is used to deliver the request and for security, and we do not store it with your game data.</p>
+
+    <h2>2. How we use information</h2>
+    <ul>
+      <li>To show daily and World Tour leaderboards</li>
+      <li>To let other players race your ghost, and you race theirs</li>
+      <li>To check that submitted scores are plausible, so leaderboards stay fair</li>
+    </ul>
+    <p>We do not use your information for advertising, profiling, or sale to third parties.</p>
+
+    <h2>3. Public leaderboards and ghosts</h2>
+    <p>Leaderboards are visible to every player of the game. They show your player name, rank and score. Your best climb on a board may also be shown to other players as a ghost — a translucent copy of your climber following your recorded path, labelled with your player name. No other information about you is shown.</p>
+    <div class="notice">
+      <p>We may rename or remove player names that are offensive or impersonate someone, and remove scores that are clearly not from genuine play.</p>
+    </div>
+
+    <h2>4. Data storage and processing</h2>
+    <p>Online data is stored in a database hosted by <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="teal-link">Supabase</a>, our backend and hosting provider, acting on our behalf, on servers in Frankfurt, Germany. Data is protected in transit using encryption (HTTPS/TLS). The database only accepts writes through checked functions, and each anonymous account can only change its own name and climbs (via database Row-Level Security). Data may be stored on servers located outside your country; by using the online features you consent to this transfer and processing.</p>
+
+    <h2>5. Data sharing</h2>
+    <p>We do not sell your data. We share data only with:</p>
+    <ul>
+      <li><strong>Supabase</strong>, solely to host the leaderboard data described above on our behalf.</li>
+      <li><strong>Other players</strong>, who see your player name, scores and ghost on public leaderboards.</li>
+      <li><strong>Legal authorities</strong>, if required to comply with applicable law or a valid legal request.</li>
+    </ul>
+
+    <h2>6. Data retention and deletion</h2>
+    <p>We keep your player name and best climbs for as long as your anonymous account exists. Daily leaderboards may be cleared after their day is over. You can remove your data in the following ways:</p>
+    <ul>
+      <li><strong>In the game:</strong> Settings → <em>Delete my online data</em>. This deletes your account, player name and all your leaderboard entries from our servers straight away.</li>
+      <li><strong>By email:</strong> write to us at the address below with your player name, and we will delete the matching account within 30 days.</li>
+      <li><strong>Local data:</strong> uninstalling the game, or clearing its storage in your device settings, removes everything stored on your device.</li>
+    </ul>
+
+    <h2>7. Children's privacy</h2>
+    <p>Tower Pact is a general-audience game and is not directed to children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. The game collects no personal information beyond a chosen player name, and it has no chat or messaging between players.</p>
+
+    <h2>8. Your rights</h2>
+    <p>Depending on where you live, you may have rights to access, correct, or delete the data associated with your account, or to object to or restrict certain processing. You can change your player name in Settings, delete your online data as described in Section 6, or contact us using the details below.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time — for example, if we add new features. When we do, we will revise the "Last updated" date above and post the new version at this URL. Material changes will be reflected here; your continued use of the game after an update means you accept the revised policy.</p>
+
+    <h2>10. Contact us</h2>
+    <p>If you have questions about this policy or a request regarding your data, contact us at:</p>
+    <p><strong>SwissyWorks</strong><br />
+    Email: <a href="mailto:contact@swissyworks.com" class="contact-link">contact@swissyworks.com</a></p>
+  </div>
+
+  <footer>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 SwissyWorks. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
