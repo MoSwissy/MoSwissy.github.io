@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>سياسة الخصوصية — فانوس / Fanous Privacy Policy</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --orange: #e8673a;
+      --teal: #2a6fdb; /* Tower Pact accent (frost blue) */
+      --text-primary: #1a1a1a;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9a9a9a;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f7f6f3;
+      --bg-warm: #fbf7f0;
+      --border: rgba(0,0,0,0.1);
+      --border-strong: rgba(0,0,0,0.18);
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px); z-index: 100;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      background: linear-gradient(135deg, #e8673a 0%, #c94f20 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 13px; color: #fff;
+    }
+    .logo-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { font-size: 14px; color: var(--text-secondary); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 64px 48px 96px; }
+
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-secondary);
+      border: 0.5px solid var(--border-strong);
+      padding: 8px 16px; border-radius: 8px;
+      margin-bottom: 48px; transition: background 0.2s;
+    }
+    .back-btn:hover { background: var(--bg-secondary); }
+
+    .app-badge {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--bg-warm);
+      border: 0.5px solid var(--border);
+      border-radius: 14px; padding: 16px 20px;
+      margin-bottom: 32px;
+    }
+    .app-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      display: block; flex-shrink: 0;
+      object-fit: cover;
+      border: 0.5px solid var(--border);
+    }
+    .app-name {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 16px; color: var(--text-primary);
+    }
+    .app-meta { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+    .page-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 1.8px;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 14px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 40px; letter-spacing: -1.5px;
+      color: var(--text-primary); margin-bottom: 12px;
+    }
+    .date { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+    .summary-card {
+      background: var(--bg-secondary);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 10px; padding: 18px 22px;
+      margin-bottom: 48px;
+    }
+    .summary-card p {
+      font-size: 14px; line-height: 1.75;
+      color: var(--text-secondary); font-weight: 400; margin: 0;
+    }
+    .summary-card strong { color: var(--text-primary); }
+
+    .notice {
+      background: var(--bg-warm);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: 8px; padding: 14px 18px;
+      margin: 16px 0;
+    }
+    .notice p { font-size: 13px; margin: 0; color: var(--text-secondary); }
+
+    h2 {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 18px; color: var(--text-primary);
+      margin: 40px 0 12px; padding-top: 8px;
+      border-top: 0.5px solid var(--border);
+    }
+    h3 {
+      font-size: 14px; font-weight: 500;
+      color: var(--text-primary); margin: 20px 0 8px;
+    }
+    p {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 14px;
+    }
+    ul { margin: 10px 0 14px 20px; }
+    ul li {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary); font-weight: 300;
+      margin-bottom: 6px;
+    }
+    .muted { font-size: 13px; color: var(--text-muted); font-style: italic; }
+    code {
+      font-size: 12px; background: var(--bg-secondary);
+      border: 0.5px solid var(--border); border-radius: 4px;
+      padding: 2px 6px; color: var(--text-secondary);
+    }
+    .contact-link { color: var(--orange); }
+    .teal-link { color: var(--teal); }
+
+    footer {
+      padding: 30px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+      border-top: 0.5px solid var(--border);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--text-secondary); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-primary); }
+    .footer-copy { font-size: 13px; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .container { padding: 48px 24px 72px; }
+      h1 { font-size: 32px; }
+      footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+    }
+    .legal-ar ul { margin: 10px 20px 14px 0; }
+    .legal-sep { border: 0; border-top: 1px solid currentColor; opacity: .15; margin: 48px 0; }
+  </style>
+</head>
+<body>
+  <!-- Source: docs/legal/*.md in the Fanous repo (scripts/build-legal.mjs). Edit there, then republish. -->
+
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#contact">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <a href="/" class="back-btn">← Back to Home</a>
+    <div class="page-label">Legal · Fanous (فانوس)</div>
+
+    <section lang="ar" dir="rtl" class="legal-ar">
+<h1 dir="auto">سياسة الخصوصية — فانوس</h1>
+<p dir="auto">آخر تحديث: 21 نوفمبر 2026 • الناشر: SwissyWorks • التواصل: support@swissyworks.com</p>
+<p dir="auto"><strong>باختصار:</strong> فانوس لا يجمع بياناتك الشخصية ولا يرسلها إلى أي خادم. لا إعلانات، ولا أدوات تتبّع، ولا تحليلات من أطراف ثالثة.</p>
+<ul>
+<li dir="auto"><strong>ما الذي يُحفظ؟</strong> الاسم الاختياري، والحرف الذي تختاره، وإجابات أسئلة الإعداد، ونتائج الألعاب ومستوياتها، وموعد التذكير — على جهازك فقط.</li>
+<li dir="auto"><strong>سؤال التركيز</strong> يضبط الوقت المتاح لكل سؤال فقط، وليس تشخيصًا طبيًا، ولا يغادر جهازك.</li>
+<li dir="auto"><strong>التذكيرات</strong> إشعارات محلية يجدولها جهازك؛ لا نستخدم الإشعارات عن بُعد ولا معرّفات الأجهزة.</li>
+<li dir="auto"><strong>الأطفال:</strong> لا نجمع بيانات من أي مستخدم، بما في ذلك الأطفال.</li>
+<li dir="auto"><strong>الحذف:</strong> «أنا ← حذف بياناتي» يمسح كل شيء فورًا، وحذف التطبيق يحذف بياناته.</li>
+<li dir="auto"><strong>التغييرات:</strong> إن أضفنا مزامنة اختيارية لاحقًا فسنحدّث السياسة ونطلب موافقتك أولًا.</li>
+</ul>
+    </section>
+
+    <hr class="legal-sep" />
+
+    <section lang="en" dir="ltr">
+<h1 dir="auto">Privacy Policy — Fanous</h1>
+<p dir="auto">Last updated: 21 November 2026 • Publisher: SwissyWorks • Contact: support@swissyworks.com</p>
+<p dir="auto"><strong>In short:</strong> Fanous does not collect or transmit personal data. No ads, no trackers, no third-party analytics.</p>
+<ul>
+<li dir="auto"><strong>Stored on your device only:</strong> optional display name, chosen avatar letter, onboarding answers, game results and levels, reminder time.</li>
+<li dir="auto"><strong>Focus question:</strong> used only to give extra time per question; it is not a medical assessment and never leaves the device.</li>
+<li dir="auto"><strong>Reminders:</strong> local notifications scheduled by the device; no push service, no device identifiers.</li>
+<li dir="auto"><strong>Children:</strong> we collect no data from anyone, including children.</li>
+<li dir="auto"><strong>Deletion:</strong> Me → Delete my data erases everything immediately; uninstalling also removes it.</li>
+<li dir="auto"><strong>Changes:</strong> if optional sync is added later, this policy will be updated and your consent requested first.</li>
+</ul>
+    </section>
+  </div>
+
+  <footer>
+    <a href="/" class="logo">
+      <div class="logo-icon">SW</div>
+      <span class="logo-text">SwissyWorks</span>
+    </a>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 SwissyWorks. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
